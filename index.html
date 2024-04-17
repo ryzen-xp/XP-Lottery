@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-3 Lottery</title>
+    
+   
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 60px;
+            color: #007bff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">XP Lottery</h1>
+        <p>Manager: <span id="managerAddress"></span></p>
+        <p>Price of Lottery Ticket: <span id="price"></span> ETH</p>
+        <p>Prize Poll: <span id="total_price">0</span> ETH</p>
+       
+        <p id="Connected">Connected Account: 0x.............  </p>
+                <input type="number" id="enterAmount" placeholder="Enter amount in ETH">
+         <button id="man" onclick="set_Price()">Set Price</button>
+        <button onclick="enterLottery()">Enter Lottery</button>
+        <button id="man1" onclick="pickWinner()">Pick Winner</button>
+        <button  id="off"onclick="connect()">Connect to Metamask</button>
+        
+        <div id="playersList">
+            <h2>Players:</h2>
+            <ul id="players"></ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    
+    <script src="App.js"></script>
+  
+</body>
+</html>
+
